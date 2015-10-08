@@ -41,13 +41,6 @@ group :development, :test do
   gem 'spring'
 
   gem 'sqlite3', '1.3.9'
-
-  # Fixing heroku routing problem
-  if defined?(JsRoutes)
-    JsRoutes.setup do |config|
-      config.include = [/item/]
-      config.default_url_options = {:local => I18n.locale}
-  end
 end
 
 group :production do
